@@ -1,10 +1,10 @@
 class Frequencia:
-    def __init__(self, id_frequencia, aluno, disciplina, data, status):
+    def __init__(self, id_frequencia, data_aula, status, aluno, professor, disciplina):
         self.id_frequencia = id_frequencia
-        self.aluno = aluno
-        self.disciplina = disciplina
-        self.data = data
+        self.data_aula = data_aula
         self.status = status
+        self.aluno = aluno
+        self.professor = professor
+        self.disciplina = disciplina
 
-    def __repr__(self):
-        return f"<Freq {self.aluno.nome} - {self.status} ({self.disciplina.nome})>"
+        aluno.frequencias.append(self)
