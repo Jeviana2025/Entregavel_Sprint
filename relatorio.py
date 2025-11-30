@@ -1,17 +1,9 @@
-from datetime import date
-
 class Relatorio:
-    contador = 1
-
-    def __init__(self, nome_relatorio, alunos, notas, frequencias):
-        self.id_relatorio = Relatorio.contador
-        Relatorio.contador += 1
+    def __init__(self, id_relatorio, nome_relatorio, data_geracao, aluno):
+        self.id_relatorio = id_relatorio
         self.nome_relatorio = nome_relatorio
-        self.data_geracao = date.today()
-        self.alunos = alunos
-        self.notas = notas
-        self.frequencias = frequencias
+        self.data_geracao = data_geracao
+        self.aluno = aluno
 
-    def __repr__(self):
-        return (f"<Relatório {self.nome_relatorio} | "
-                f"Alunos={len(self.alunos)}, Notas={len(self.notas)}, Freq={len(self.frequencias)}>")
+    def gerar(self):
+        print(f"Relatório gerado para o aluno {self.aluno.nome}")
