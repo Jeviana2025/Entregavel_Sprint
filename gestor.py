@@ -1,10 +1,17 @@
-from usuario import Usuario
+class Aluno:
+    def __init__(self, id_aluno, nome, data_nascimento):
+        self.id_aluno = id_aluno
+        self.nome = nome
+        self.data_nascimento = data_nascimento
+        self.notas = []
+        self.frequencias = []
+        self.responsaveis = []
 
-class Gestor(Usuario):
-    def __init__(self, id_usuario, nome, email, senha, cpf, telefone, cargo):
-        super().__init__(id_usuario, nome, email, senha, cpf, telefone)
-        self.cargo = cargo
+    def consultar_notas(self):
+        return self.notas
 
-    def gerar_relatorio(self, relatorio):
-        print(f"Gestor {self.nome} gerou o relatório {relatorio.nome_relatorio}")
+    def consultar_frequencias(self):
+        return self.frequencias
 
+    def adicionar_responsavel(self, responsavel):
+        self.responsaveis.append(responsavel)
