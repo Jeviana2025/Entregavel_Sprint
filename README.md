@@ -6,7 +6,8 @@ O objetivo é demonstrar o uso de **Orientação a Objetos em Python**, seguindo
 <img width="749" height="503" alt="image" src="https://github.com/user-attachments/assets/b4077a2f-4892-46a9-92fa-1457b703cb93" />
 
 # Objetivo principal
-Uso real de POO
-Classes funcionando
-Relacionamentos entre objetos
+Uso real de POO, implentação das classes funcionando e o relacionamentos entre objetos.
+# Explicação do funcionamento
+A princípio aplica-se o conceito de Herança, a classe Usuario é “pai”,  e dela herdam as classes: Professor,Gestor, Responsável.
+Todos eles possuem: email, senha, cpf, telefone, métodos de login e isso vai evitar repetição do codigo.
 
