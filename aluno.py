@@ -7,17 +7,11 @@ class Aluno:
         self.frequencias = []
         self.responsaveis = []
 
-    def adicionar_nota(self, nota):
-        self.notas.append(nota)
-
-    def adicionar_frequencia(self, freq):
-        self.frequencias.append(freq)
-
     def consultar_notas(self):
-        return [f"{n.disciplina.nome}: {n.valor}" for n in self.notas]
+        return self.notas
 
     def consultar_frequencias(self):
-        return [f"{f.data} - {f.disciplina.nome}: {f.status}" for f in self.frequencias]
+        return self.frequencias
 
     def adicionar_responsavel(self, responsavel):
         self.responsaveis.append(responsavel)
