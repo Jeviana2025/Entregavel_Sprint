@@ -1,13 +1,12 @@
-from datetime import date
-
 class Nota:
-    def __init__(self, id_nota, aluno, disciplina, valor, tipo_avaliacao):
+    def __init__(self, id_nota, valor, data, tipo_avaliacao, aluno, professor, disciplina):
         self.id_nota = id_nota
-        self.aluno = aluno
-        self.disciplina = disciplina
         self.valor = valor
+        self.data = data
         self.tipo_avaliacao = tipo_avaliacao
-        self.data_registro = date.today()
+        self.aluno = aluno
+        self.professor = professor
+        self.disciplina = disciplina
 
-    def __repr__(self):
-        return f"<Nota {self.valor} - {self.aluno.nome} ({self.disciplina.nome})>"
+        aluno.notas.append(self)
+
