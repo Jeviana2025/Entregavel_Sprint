@@ -99,7 +99,13 @@ class Usuario(Autenticavel, ABC):
         print(f"[USUARIO] excluindo usuário {self.__id_usuario}")
 
 
-# ====================== SUBTIPOS DE USUARIO ======================
+# ====================== SUBTIPOS DE USUARIO =========
+# Nesta face serão implementadas as subclasses.
+#class Gestor(Usuario)
+#class Professor(Usuario)
+#class Aluno(Usuario)
+#class Responsavel(Usuario)
+
 from datetime import date
 
 # ====================== GESTOR ======================
@@ -230,6 +236,7 @@ class Responsavel(Usuario):
 
     def acompanhar_desempenho(self):
         print(f"[RESPONSÁVEL] Acompanhando desempenho do aluno {self.__aluno_vinculado.matricula}")
+
 
 
 
