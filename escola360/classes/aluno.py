@@ -1,11 +1,9 @@
 #Implementa a Classe Aluno e seus Métodos
-
-
 from __future__ import annotations
 from datetime import date
 from typing import List
 
-from .usuarios import Usuario  
+from usuarios import Usuario  # Aluno é um usuário autenticável
 
 
 class Aluno(Usuario):
@@ -61,5 +59,3 @@ class Aluno(Usuario):
 
     def __adicionar_frequencia(self, frequencia: "Frequencia") -> None:
         self.__frequencias.append(frequencia)
-
-
