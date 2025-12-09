@@ -13,6 +13,27 @@ Uso POO, implentação das classes funcional e o relacionamentos entre objetos.
 A princípio aplica-se o conceito de Herança, a classe Usuario é “pai”,  e dela herdam as classes: Professor,Gestor, Responsável.
 Todos eles possuem: email, senha, cpf, telefone, métodos de login e isso vai evitar repetição do codigo.
 
+A implementação do Sistema Escola 360 utilizou de forma consistente diversos princípios e práticas fundamentais da programação, entre os principais, destacam se:
+#Abstração
+As classes foram modeladas a partir de entidades reais do contexto escolar, cada classe representa apenas os atributos e comportamentos essenciais do domínio, ocultando detalhes internos e proporcionando uma visão simplificada do sistema.
+#Encapsulamento
+A proteção dos dados é garantida por meio de atributos privados\protegidos e pela utilização de @properties para validação e acesso controlado, isso assegura a integridade das informações, como validação automática de emails, nota entre 0 e 10 e status de frequência.
+#Herança
+Neste requisito foi criada uma classe abstrata UsuarioAutenticavel, da qual derivam Gestor, Professor, Responsavel e Aluno. Essa estrutura evita repetição de código e promove reuso, permitindo que todas as subclasses herdam atributos comuns (id, email, senha, CPF, telefone, endereço) e o método fazer_login.
+#Polimorfismo 
+A herança permite que métodos comuns sejam chamados de forma uniforme, independentemente do tipo específico de usuário. A existência de um método abstrato para login, por exemplo, possibilita que cada tipo de usuário possa futuramente implementar variações específicas sem alterar a interface geral.
+#Composição
+O projeto faz uso de composição para representar relações entre os objetos.
+um Aluno possui uma coleção interna de Nota e Frequencia;
+uma Disciplina contém suas respectivas avaliações;
+uma Frequencia referencia aluno, professor e disciplina simultaneamente, a relação entre Responsavel e Aluno também ocorre por composição. 
+Essas estruturas tornam o modelo mais fiel ao funcionamento real de uma instituição escolar.
+6. Relacionamentos bidirecionais
+Quando um professor registra uma nota ou frequência, as informações são automaticamente vinculadas ao aluno e à disciplina, mantendo coerência entre os módulos. Essa prática evita inconsistências e reflete a natureza integrada dos dados.
+#Separação em módulos (modularização)
+A organização do sistema em arquivos como usuarios.py, aluno.py, avaliacao.py e disciplinas.py favorece manutenção, reutilização e clareza do código, contribuindo para um design mais limpo e sustentável.
+#Validação e integridade dos dados
+As @properties com validação reforçam boas práticas de desenvolvimento orientado a objetos, garantindo que cada classe seja responsável por manter válidos os próprios dados.
 
 
 
