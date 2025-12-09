@@ -36,15 +36,21 @@ A organização do sistema em arquivos como usuarios.py, aluno.py, avaliacao.py 
 As @properties com validação reforçam boas práticas de desenvolvimento orientado a objetos, garantindo que cada classe seja responsável por manter válidos os próprios dados.
 # Possíveis usos da nossa solução
 Gestão escolar mais organizada
+
 A ferramenta poderá ser utilizada por escolas públicas ou privadas para centralizar informações de alunos, professores, notas, presenças e disciplinas, reduzindo processos manuais e aumentando a produtividade da equipe gestora.
 Acompanhamento mais eficiente da aprendizagem
+
 Professores poderão registrar avaliações e frequência de forma padronizada, gerando um histórico completo de cada estudante. Isso facilitará a identificação de dificuldades de aprendizagem e apoiaria intervenções pedagógicas mais assertivas.
 Fortalecimento da comunicação entre responsáveis e escola
+
 Responsáveis terão acesso rápido às informações acadêmicas de seus filhos, como notas atualizadas e registros de faltas, aumentando a participação da família no processo educativo.
+
 Automação de relatórios e indicadores educacionais
 O sistema pode ser expandido para gerar relatórios automáticos para uso interno ou envio aos órgãos educacionais, diminuindo o tempo gasto com documentos burocráticos.
+
 Base para soluções comerciais
 Empresas de tecnologia educacional poderiam utilizar essa estrutura como ponto de partida para criar produtos mais robustos, incluindo dashboards, apps móveis e integração com outros sistemas escolares.
+
 Ferramenta de apoio para professores iniciantes
 Estudantes de licenciatura ou profissionais em formação continuada poderiam usar o sistema para simular rotinas de registro escolar, adicionando como notas e frequências na sua organização no dia a dia de uma escola.
 
