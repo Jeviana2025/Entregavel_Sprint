@@ -6,6 +6,71 @@ O objetivo é demonstrar o uso de **Orientação a Objetos em Python**, seguindo
 <img width="749" height="503" alt="image" src="https://github.com/user-attachments/assets/b4077a2f-4892-46a9-92fa-1457b703cb93" />
 # O sistema implementa:
 Uma interface de autenticação, uma classe base abstrata para usuários, quatro subclasses especializadas,métodos específicos para cada papel, encapsulamento forte e princípios de herança e polimorfismo.
+classDiagram
+    class UsuarioAutenticavel {
+        <<abstract>>
+        - id: int
+        - nome: str
+        - email: str
+        - senha: str
+        - cpf: str
+        - telefone: str
+        - endereco: str
+        + fazer_login(email, senha) bool
+    }
+    class Gestor
+    class Professor {
+        + lancar_nota()
+        + lancar_frequencia()
+    }
+    class Responsavel {
+        + consultar_nota()
+        + consultar_frequencia()
+    }
+    class Aluno {
+        - idaluno: int
+        - datanascimento: date
+        - responsaveis: List
+        - notas: List
+        - frequencias: List
+        + consultar_nota()
+        + consultar_frequencia()
+        + adicionar_responsavel()
+        + adicionar_nota()
+        + adicionar_frequencia()
+    }
+    UsuarioAutenticavel <|-- Gestor
+    UsuarioAutenticavel <|-- Professor
+    UsuarioAutenticavel <|-- Responsavel
+    UsuarioAutenticavel <|-- Aluno
+
+    Aluno "0..*" -- "0..*" Responsavel
+    Disciplina "1" -- "0..*" Nota
+    Disciplina "1" -- "0..*" Frequencia
+    Aluno "1" -- "0..*" Nota
+    Aluno "1" -- "0..*" Frequencia
+    Professor "1" -- "0..*" Nota
+    Professor "1" -- "0..*" Frequencia
+    class Disciplina {
+        - iddisciplina: int
+        - nome: str
+        - notas: List
+        - frequencias: List
+        + adicionar_nota()
+        + adicionar_frequencia()
+    }
+    class Nota {
+        - idnota: int
+        - dataavaliacao: date
+        - tipoavaliacao: str
+        - valor: float
+    }
+    class Frequencia {
+        - idfrequencia: int
+        - dataaula: date
+        - statusfrequencia: str
+    }
+
 
 # Objetivo principal
  O objetivo é servir como base para sistemas escolares, acadêmicos ou educacionais que envolvem login, perfis e ações específicas de cada tipo de usuário.
