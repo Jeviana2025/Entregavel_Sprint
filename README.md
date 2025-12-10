@@ -7,7 +7,7 @@ O objetivo é demonstrar o uso de **Orientação a Objetos em Python**, seguindo
 # O sistema implementa:
 Uma interface de autenticação, uma classe base abstrata para usuários, quatro subclasses especializadas,métodos específicos para cada papel, encapsulamento forte e princípios de herança e polimorfismo.
 
-classDiagram
+# classDiagram
  class UsuarioAutenticavel {
  <<abstract>>
  - id: int
