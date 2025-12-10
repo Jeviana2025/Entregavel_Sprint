@@ -1,10 +1,11 @@
 
 
-# Escola360 - Dashboard de Acompanhamento Escolar
+# 📘Escola360 - Dashboard de Acompanhamento Escolar
 
 O Sistema Escola 360 é uma aplicação de gestão escolar que modela o ecossistema de uma instituição de ensino. Desenvolvido com foco em boas práticas de programação, extensibilidade e manutenibilidade, o sistema busca oferecer uma base sólida para o gerenciamento acadêmico.
 
-Características principais:
+------------------------------------------------------------------------
+## 📂 Características principais:
 
  - Gestão de múltiplos tipos de usuários (professores, alunos, responsáveis, gestores)
 
@@ -17,34 +18,34 @@ Características principais:
  - Arquitetura modular e extensível
 
 **OBS -*** <ins>Sistema na fase inicial de desenvolvimento.</ins>
-
 Nesta etapa foi implementado apenas o básico do Backend do sistema.
 
-## Visão Geral do Projeto
+------------------------------------------------------------------------
+## 🧩 Visão Geral do Projeto
 
 O projeto está organizado em módulos, cada um representando uma parte do domínio:
 
- **usuarios.py:**
+ 👤 **usuarios.py:**
   + Classes base (Usuario, Autenticavel, GeradorRelatorio) e papéis de gestão, ensino e acompanhamento  (Professor, Gestor, Responsavel).
 
- **aluno.py**
+ 👨**aluno.py**
   + Implementação da classe Aluno e seus métodos de consulta de dados acadêmicos.
 
- **disciplinas.py**
+ 📚**disciplinas.py**
   + Implementação da classe Disciplina e seu registro de notas/frequências.
 
- **avaliacao.py**
+ 📝**avaliacao.py**
   + Classes que representam registros acadêmicos (Nota e Frequencia).
 
- **relatorios.py**
+📊**relatorios.py**
   + Classe simples para o objeto Relatorio, usado pelo Gestor.
 
- **main.py**
+⚙️**main.py**
   + Script de demonstração para testar as funcionalidades e relações entre as classes.
 
 
-
-## Como Executar
+------------------------------------------------------------------------
+## ▶️Como Executar
 
 Certifique-se de ter o Python 3.10+ instalado.
 
@@ -97,7 +98,8 @@ Notas registradas em Matemática:
 ````
 (Os textos exatos podem variar ligeiramente conforme adaptações/alterações no arquivo main.py.)
 
-## Conceitos de design e boas práticas utilizadas
+------------------------------------------------------------------------
+## ✅ Conceitos de design e boas práticas utilizadas
 Este projeto foi pensado como um modelo de domínio didático, aplicando boas práticas de Programação Orientada a Objetos (POO):
 
 > Herança e polimorfismo
@@ -126,7 +128,8 @@ ID positivo, CPF não vazio.
 
 Quando o professor lança uma nota ou registra uma frequência, o código atualiza as listas do Professor, do Aluno e da Disciplina, garantindo que todos os lados do relacionamento se mantenham sincronizados.
 
-## Possíveis usos do Escola360
+------------------------------------------------------------------------
+## 🚀 Possíveis usos do Escola360
 Embora o projeto seja pequeno e construido para fins didáticos, ele já representa um núcleo que poderia facilmente ser expandido em várias direções. Vejamos algumas possibilidades:
 
 1. Backend de um sistema escolar web ou mobile
@@ -151,3 +154,30 @@ Embora o projeto seja pequeno e construido para fins didáticos, ele já represe
   - O modelo poderia ser integrado a sistemas maiores, atuando como:
     - Módulo de “vida acadêmica” (notas, frequências, boletins).
     - Fonte de dados para dashboards de desempenho e evasão.
+------------------------------------------------------------------------
+
+## 👨‍💻 Desenvolvedores
+
+#### 👤 José Eudásio de Monte Viana  | 📧 **Email:** jeviana2020@gmail.com  
+
+
+#### 👤 Francisco Diogo de Sousa Silva  | 📧 **Email:** sousa.diogo@aluno.ufca.edu.br  
+
+
+#### 👤 Francisco Sávio Sousa da Cunha  | 📧 **Email:** savio.cunha@aluno.ufca.edu.br  
+
+
+------------------------------------------------------------------------
+## 📌 Requisitos
+
+-   Python **3.10+**\
+-   Nenhuma dependência externa
+
+------------------------------------------------------------------------
+
+## 📄 Licença
+
+Uso livre para fins acadêmicos e didáticos.
+
+------------------------------------------------------------------------
+
