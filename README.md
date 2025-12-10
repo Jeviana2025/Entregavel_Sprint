@@ -7,10 +7,8 @@ O objetivo é demonstrar o uso de **Orientação a Objetos em Python**, seguindo
 # O sistema implementa:
 Uma interface de autenticação, uma classe base abstrata para usuários, quatro subclasses especializadas,métodos específicos para cada papel, encapsulamento forte e princípios de herança e polimorfismo.
 
-# ClassDiagram
+ClassDiagram
 <img width="1536" height="1024" alt="ChatGPT Image 9 de dez  de 2025, 21_30_32" src="https://github.com/user-attachments/assets/af5dc1cc-7a8a-40fb-9bc1-ddfb45052f2f" />
-
-
 
 # Objetivo principal
  O objetivo é servir como base para sistemas escolares, acadêmicos ou educacionais que envolvem login, perfis e ações específicas de cada tipo de usuário.
