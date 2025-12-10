@@ -7,6 +7,40 @@ O objetivo é demonstrar o uso de **Orientação a Objetos em Python**, seguindo
 # O sistema implementa:
 Uma interface de autenticação, uma classe base abstrata para usuários, quatro subclasses especializadas,métodos específicos para cada papel, encapsulamento forte e princípios de herança e polimorfismo.
 
+classDiagram
+ class UsuarioAutenticavel {
+ <<abstract>>
+ - id: int
+ - nome: str
+ - email: str
+ - senha: str
+ - cpf: str
+ - telefone: str
+ - endereco: str
+ + fazer_login(email, senha) bool
+ }
+ class Gestor
+ class Professor {
+ + lancar_nota()
+ + lancar_frequencia()
+ }
+ class Responsavel {
+ + consultar_nota()
+ + consultar_frequencia()
+ }
+ class Aluno {
+ - idaluno: int
+ - datanascimento: date
+ - responsaveis: List
+ - notas: List
+ - frequencias: List
+ + consultar_nota()
+ + consultar_frequencia()
+ + adicionar_responsavel()
+ + adicionar_nota()
+ + adicionar_frequencia()
+ }
+
 # Objetivo principal
  O objetivo é servir como base para sistemas escolares, acadêmicos ou educacionais que envolvem login, perfis e ações específicas de cada tipo de usuário.
 Uso POO, implentação das classes funcional e o relacionamentos entre objetos.
