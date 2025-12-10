@@ -9,7 +9,7 @@ Uma interface de autenticação, uma classe base abstrata para usuários, quatro
 
 # classDiagram
  class UsuarioAutenticavel {
- <<abstract>>
+ <abstract>
  - id: int
  - nome: str
  - email: str
