@@ -16,8 +16,9 @@ Características principais:
 
  - Arquitetura modular e extensível
 
-**OBS -*** <ins>Sistema na fase inicial de desenvolvimento.</ins> 
-<ins>Nesta etapa foi implementado apenas o básico do Backend do sistema.</ins> 
+**OBS -*** <ins>Sistema na fase inicial de desenvolvimento.</ins>
+
+Nesta etapa foi implementado apenas o básico do Backend do sistema.
 
 ## Visão Geral do Projeto
 
