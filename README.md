@@ -1,67 +1,151 @@
-# Entregavel_Sprint
-# Escola360 – Sistema Escolar
-O Sistema Escola 360 é uma estrutura orientada a objetos em Python destinada ao gerenciamento de usuários em um ambiente escolar.
-Este projeto implementa um modelo simples de sistema escolar, baseado no diagrama de classes fornecido.  
-O objetivo é demonstrar o uso de **Orientação a Objetos em Python**, seguindo boas práticas de modelagem.
-<img width="749" height="503" alt="image" src="https://github.com/user-attachments/assets/b4077a2f-4892-46a9-92fa-1457b703cb93" />
-# O sistema implementa:
-Uma interface de autenticação, uma classe base abstrata para usuários, quatro subclasses especializadas,métodos específicos para cada papel, encapsulamento forte e princípios de herança e polimorfismo.
 
-ClassDiagram
-<img width="1536" height="1024" alt="ChatGPT Image 9 de dez  de 2025, 21_30_32" src="https://github.com/user-attachments/assets/af5dc1cc-7a8a-40fb-9bc1-ddfb45052f2f" />
 
-# Objetivo principal
- O objetivo é servir como base para sistemas escolares, acadêmicos ou educacionais que envolvem login, perfis e ações específicas de cada tipo de usuário.
-Uso POO, implentação das classes funcional e o relacionamentos entre objetos.
-# Explicação do funcionamento
-A princípio aplica-se o conceito de Herança, a classe Usuario é “pai”,  e dela herdam as classes: Professor,Gestor, Responsável.
-Todos eles possuem: email, senha, cpf, telefone, métodos de login e isso vai evitar repetição do codigo.
+# Escola360 - Dashboard de Acompanhamento Escolar
 
-A implementação do Sistema Escola 360 utilizou de forma consistente diversos princípios e práticas fundamentais da programação, entre os principais, destacam se:
-# Abstração
-As classes foram modeladas a partir de entidades reais do contexto escolar, cada classe representa apenas os atributos e comportamentos essenciais do domínio, ocultando detalhes internos e proporcionando uma visão simplificada do sistema.
-# Encapsulamento
-A proteção dos dados é garantida por meio de atributos privados\protegidos e pela utilização de @properties para validação e acesso controlado, isso assegura a integridade das informações, como validação automática de emails, nota entre 0 e 10 e status de frequência.
-# Herança
-Neste requisito foi criada uma classe abstrata UsuarioAutenticavel, da qual derivam Gestor, Professor, Responsavel e Aluno. Essa estrutura evita repetição de código e promove reuso, permitindo que todas as subclasses herdam atributos comuns (id, email, senha, CPF, telefone, endereço) e o método fazer_login.
-# Polimorfismo 
-A herança permite que métodos comuns sejam chamados de forma uniforme, independentemente do tipo específico de usuário. A existência de um método abstrato para login, por exemplo, possibilita que cada tipo de usuário possa futuramente implementar variações específicas sem alterar a interface geral.
-# Composição
-O projeto faz uso de composição para representar relações entre os objetos.
-um Aluno possui uma coleção interna de Nota e Frequencia;
-uma Disciplina contém suas respectivas avaliações;
-uma Frequencia referencia aluno, professor e disciplina simultaneamente, a relação entre Responsavel e Aluno também ocorre por composição. 
-Essas estruturas tornam o modelo mais fiel ao funcionamento real de uma instituição escolar.
-# Relacionamentos bidirecionais
-Quando um professor registra uma nota ou frequência, as informações são automaticamente vinculadas ao aluno e à disciplina, mantendo coerência entre os módulos. Essa prática evita inconsistências e reflete a natureza integrada dos dados.
-#Separação em módulos (modularização)
-A organização do sistema em arquivos como usuarios.py, aluno.py, avaliacao.py e disciplinas.py favorece manutenção, reutilização e clareza do código, contribuindo para um design mais limpo e sustentável.
-# Validação e integridade dos dados
-As @properties com validação reforçam boas práticas de desenvolvimento orientado a objetos, garantindo que cada classe seja responsável por manter válidos os próprios dados.
-# Possíveis usos da nossa solução
-Gestão escolar mais organizada
+O Sistema Escola 360 é uma aplicação de gestão escolar que modela o ecossistema de uma instituição de ensino. Desenvolvido com foco em boas práticas de programação, extensibilidade e manutenibilidade, o sistema busca oferecer uma base sólida para o gerenciamento acadêmico.
 
-A ferramenta poderá ser utilizada por escolas públicas ou privadas para centralizar informações de alunos, professores, notas, presenças e disciplinas, reduzindo processos manuais e aumentando a produtividade da equipe gestora.
+Características principais:
 
-Acompanhamento mais eficiente da aprendizagem
+ - Gestão de múltiplos tipos de usuários (professores, alunos, responsáveis, gestores)
 
-Professores poderão registrar avaliações e frequência de forma padronizada, gerando um histórico completo de cada estudante. Isso facilitará a identificação de dificuldades de aprendizagem e apoiaria intervenções pedagógicas mais assertivas.
-Fortalecimento da comunicação entre responsáveis e escola
+ - Controle completo de notas e frequência
 
-Responsáveis terão acesso rápido às informações acadêmicas de seus filhos, como notas atualizadas e registros de faltas, aumentando a participação da família no processo educativo.
+ - Sistema de disciplinas curriculares
 
-Automação de relatórios e indicadores educacionais
+ - Geração de relatórios
 
-O sistema pode ser expandido para gerar relatórios automáticos para uso interno ou envio aos órgãos educacionais, diminuindo o tempo gasto com documentos burocráticos.
+ - Arquitetura modular e extensível
 
-Base para soluções comerciais
+**OBS -*** <ins>Sistema na fase inicial de desenvolvimento.</ins> Nesta etapa foi implementado apenas o básico do Backend do sistema.
 
-Empresas de tecnologia educacional poderiam utilizar essa estrutura como ponto de partida para criar produtos mais robustos, incluindo dashboards, apps móveis e integração com outros sistemas escolares.
+## Visão Geral do Projeto
 
-Ferramenta de apoio para professores iniciantes
+O projeto está organizado em módulos, cada um representando uma parte do domínio:
 
-Estudantes de licenciatura ou profissionais em formação continuada poderiam usar o sistema para simular rotinas de registro escolar, adicionando como notas e frequências na sua organização no dia a dia de uma escola.
+ **usuarios.py:**
+  + Classes base (Usuario, Autenticavel, GeradorRelatorio) e papéis de gestão, ensino e acompanhamento  (Professor, Gestor, Responsavel).
+
+ **aluno.py**
+  + Implementação da classe Aluno e seus métodos de consulta de dados acadêmicos.
+
+ **disciplinas.py**
+  + Implementação da classe Disciplina e seu registro de notas/frequências.
+
+ **avaliacao.py**
+  + Classes que representam registros acadêmicos (Nota e Frequencia).
+
+ **relatorios.py**
+  + Classe simples para o objeto Relatorio, usado pelo Gestor.
+
+ **main.py**
+  + Script de demonstração para testar as funcionalidades e relações entre as classes.
 
 
 
+## Como Executar
 
+Certifique-se de ter o Python 3.10+ instalado.
+
+Garanta que todos os arquivos estejam na mesma pasta:
+
+    usuarios.py
+
+    aluno.py
+
+    disciplinas.py
+
+    avaliacao.py
+
+    relatorios.py
+
+    main.py
+
+No terminal, navegue até a pasta do projeto e execute:
+```python
+python main.py
+```
+
+
+
+Você deverá ver uma saída semelhante a:
+````
+--- 1. CRIAÇÃO DE ENTIDADES ---
+Professor criado: João Silva (ID: 10)
+----------------------------------------
+--- 2. TESTES DE AUTENTICAÇÃO ---
+Login de João Silva: SUCESSO.
+Login de João Silva: FALHA (esperado).
+----------------------------------------
+--- 3. LANÇAMENTO DE NOTAS E VALIDAÇÃO ---
+Nota 9.0 em Matemática lançada com sucesso.
+Nota 7.5 em Português lançada com sucesso.
+Teste de Erro de Nota: SUCESSO. Erro capturado: valor da nota deve estar entre 0 e 10
+----------------------------------------
+--- 4. TESTES DE FREQUÊNCIA E CÁLCULOS ---
+Total de Aulas de Matemática: 5
+Presenças: 3 | Faltas: 2
+Porcentagem de Frequência: 60.00%
+----------------------------------------
+--- 5. TESTES DE RELACIONAMENTO ---
+Notas registradas para Ana Pereira:
+  > Matemática: 9.0 (Prova Mensal)
+  > Português: 7.5 (Trabalho)
+Notas registradas em Matemática:
+  > Aluno: Ana Pereira, Nota: 9.0
+````
+(Os textos exatos podem variar ligeiramente conforme adaptações/alterações no arquivo main.py.)
+
+## Conceitos de design e boas práticas utilizadas
+Este projeto foi pensado como um modelo de domínio didático, aplicando boas práticas de Programação Orientada a Objetos (POO):
+
+> Herança e polimorfismo
+
+Usuario é a classe base abstrata, enquanto Gestor, Professor, Responsavel e Aluno especializam seu comportamento.
+
+Interfaces (Autenticavel, GeradorRelatorio) definem contratos claros.
+
+> Encapsulamento
+
+Atributos privados (__nome, __notas, __frequencias etc.) e properties expõem apenas o que é necessário.
+
+As coleções são retornadas como cópias, evitando modificação externa direta.
+
+> Validação de regras de negócio
+
+Notas limitadas entre 0 e 10.
+
+Status de frequência limitado a “P” ou “F”.
+
+E-mail com formato mínimo.
+
+ID positivo, CPF não vazio.
+
+> Consistência do modelo
+
+Quando o professor lança uma nota ou registra uma frequência, o código atualiza as listas do Professor, do Aluno e da Disciplina, garantindo que todos os lados do relacionamento se mantenham sincronizados.
+
+## Possíveis usos do Escola360
+Embora o projeto seja pequeno e construido para fins didáticos, ele já representa um núcleo que poderia facilmente ser expandido em várias direções. Vejamos algumas possibilidades:
+
+1. Backend de um sistema escolar web ou mobile
+   - Servir como camada de domínio em uma API (Flask, FastAPI ou Django), expondo endpoints para:
+     - Cadastro de usuários, alunos, disciplinas.
+     -	Lançamento de notas e registro de frequência.
+     -	Geração de relatórios consolidados para gestores, professores, etc..
+       
+2. Ferramenta de acompanhamento pedagógico
+   - Professores/Gestores poderiam usar uma aplicação simples, baseada nesse modelo, para:
+     - Registrar avaliações e presenças em tempo real.
+     - Gerar relatórios por aluno, por turma ou por disciplina.
+     - Exportar dados em CSV/JSON para outros sistemas.
+       
+3. Criação de Portal de Pais e Alunos
+   - Essa estrutura pode ser facilmente convertida em uma API para alimentar um portal onde responsáveis e alunos acessam suas informações em tempo real, como:
+     - Notificações de Ocorrências.
+     - Agendamento de Reuniões.
+     - Visualização/acompanhamento de atividades escolares.
+       
+4. Protótipo para integração com ERPs escolares
+  - O modelo poderia ser integrado a sistemas maiores, atuando como:
+    - Módulo de “vida acadêmica” (notas, frequências, boletins).
+    - Fonte de dados para dashboards de desempenho e evasão.
