@@ -10,11 +10,11 @@ Uma interface de autenticação, uma classe base abstrata para usuários, quatro
 # classDiagram
  class UsuarioAutenticavel {
  <abstract>
- __ id: int
- __ nome: str
- __ email: str
- __ senha: str
- __ cpf: str
+ - id: int
+ - nome: str
+ - email: str
+ - senha: str
+ - cpf: str
  __ telefone: str
  __ endereco: str
  + fazer_login(email, senha) bool
