@@ -1,4 +1,7 @@
-#Implementa a Classe Disciplina
+#Implementa a Classe Nota.
+#Implementa a Classe Frequência.
+#Implementa os respectivos métodos e atributos privados para as Classes Nota e Frequência.
+
 from __future__ import annotations
 from datetime import date
 
