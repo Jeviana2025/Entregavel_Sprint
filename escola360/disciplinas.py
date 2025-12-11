@@ -1,20 +1,45 @@
-# Implementa a Classe Disciplina
+# Implementa a Classe Disciplina.
+# Define os métodos para a classe Disciplina.
+
+from __future__ import annotations
+from typing import List
 
 class Disciplina:
+    """
+    Representa uma disciplina curricular oferecida pela instituição.
+    Mantém registros agregados de Notas e Frequências associadas a ela.
+    """
     def __init__(self, id_disciplina: int, nome: str):
-        self.id_disciplina = id_disciplina
-        self.nome = nome
-        self._notas: List[Nota] = []
-        self._frequencias: List[Frequencia] = []
+        self.__id_disciplina = id_disciplina
+        self.__nome = nome
+        self.__notas: List["Nota"] = []                 # Notas lançadas nesta disciplina
+        self.__frequencias: List["Frequencia"] = []     # Frequências registradas nesta disciplina
 
-    def adicionar_nota(self, nota: "Nota"):
-        self._notas.append(nota)
+    @property
+    def id_disciplina(self) -> int:
+        return self.__id_disciplina
 
-    def adicionar_frequencia(self, frequencia: "Frequencia"):
-        self._frequencias.append(frequencia)
+    @property
+    def nome(self) -> str:
+        return self.__nome
 
-    def listar_notas(self) -> List["Nota"]:
-        return list(self._notas)
+    @property
+    def notas(self) -> List["Nota"]:
+        # Retorna uma cópia da lista (encapsulamento)
+        return list(self.__notas)
 
-    def listar_frequencias(self) -> List["Frequencia"]:
-        return list(self._frequencias)
+    @property
+    def frequencias(self) -> List["Frequencia"]:
+        # Retorna uma cópia da lista (encapsulamento)
+        return list(self.__frequencias)
+
+    # métodos internos (privados) usados pelo Professor para
+    # manter a consistência do modelo (sincronização de relacionamentos)
+
+    def __adicionar_nota(self, nota: "Nota") -> None:
+        """Adiciona uma Nota à disciplina (chamado por Professor.lancar_nota)."""
+        self.__notas.append(nota)
+
+    def __adicionar_frequencia(self, frequencia: "Frequencia") -> None:
+        """Adiciona uma Frequencia à disciplina (chamado por Professor.registrar_frequencia)."""
+        self.__frequencias.append(frequencia)
