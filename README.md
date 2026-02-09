@@ -155,7 +155,51 @@ Embora o projeto seja pequeno e construido para fins didáticos, ele já represe
     - Módulo de “vida acadêmica” (notas, frequências, boletins).
     - Fonte de dados para dashboards de desempenho e evasão.
 ------------------------------------------------------------------------
+## 🗄️ Banco de dados utilizado no Escola360
 
+O projeto fisico do banco de dados do Escola360 foi desenvolvido utilizando o Sistema Gerenciador de Banco de Dados (SGBD) PostgreSQL, escolhido por oferecer suporte robusto a integridade referencial, constraints avançadas, validações semânticas e conformidade com padrões SQL. 
+
+🙋 **Mas o que é exatamente o projeto físico de um banco de dados?**
+
+O **projeto físico** é a etapa final da modelagem de dados. É onde os diagramas e conceitos abstratos são transformados em código SQL. Nessa fase, definimos como os dados serão armazenados, criando as tabelas, escolhendo os tipos de dados, definindo chaves primárias e estrangeiras, índices e regras de validação (constraints). Ou seja, é quando o banco sai do papel e passa a existir de fato dentro de um SGBD (como o PostgreSQL, no nosso caso).
+**Dominar essa etapa é fundamental, principalmente para quem está aprendento a programar**. Um projeto físico bem feito é essencial para qualquer aplicação seria. Entender a lógica por trás da criação das tabelas, dos relacionamentos, das chaves, ajuda o estutande a desenvolver sistemas mais robustos, organizados e profissionais. Além disso, quando o banco de dados é mal implementado o código do programa (front-end e back-end) fica mais complexo, lento e cheio de "gambiarras" para compensar as falhas na estrutura de dados.
+O diagrama abaixo é uma representação simplificada no banco de dados criado para o Escola360. O código sql e o diagrama lógico estão nos arquivos do projeto.
+
+```mermaid
+---
+title: Banco de Dados - Escola360
+---
+graph TD
+    %% Entidades de Usuário
+    USUARIOS[Usuarios] --> ALUNOS[Alunos]
+    USUARIOS --> PROFESSORES[Professores]
+    USUARIOS --> GESTORES[Gestores]
+    USUARIOS --> RESPONSAVEIS[Responsaveis]
+
+    %% Relacionamentos de Alunos
+    ALUNOS --- TURMAS[Turmas]
+    ALUNOS --- RA{Responsavel_Aluno}
+    RESPONSAVEIS --- RA
+
+    %% Estrutura Acadêmica (Lotação)
+    PROFESSORES --- LOT{Prof_Turma_Lotacao}
+    TURMAS --- LOT
+    DISCIPLINAS[Disciplinas] --- LOT
+
+    %% Registros e Eventos
+    ALUNOS --- NOTAS[Notas]
+    ALUNOS --- FREQUENCIAS[Frequencias]
+    
+    PROFESSORES --- NOTAS
+    PROFESSORES --- FREQUENCIAS
+
+    DISCIPLINAS --- NOTAS
+    DISCIPLINAS --- FREQUENCIAS
+
+    %% Comunicação
+    USUARIOS --- AVISOS[Avisos]
+```
+------------------------------------------------------------------------
 ## 👨‍💻 Desenvolvedores
 
 #### 👤 José Eudásio de Monte Viana  | 📧 **Email:** jeviana2020@gmail.com  
