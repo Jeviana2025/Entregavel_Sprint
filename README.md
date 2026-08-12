@@ -2,7 +2,7 @@
 
 O Escola360 é uma aplicação de gestão escolar que modela o ecossistema de uma instituição de ensino. Desenvolvido com foco em boas práticas de programação, extensibilidade e manutenibilidade, o sistema oferece uma base sólida para o gerenciamento acadêmico.
 
-> **Aviso:** O sistema ainda está fase de desenvolvimento.
+> **Aviso:** O sistema ainda está em fase de desenvolvimento.
 
 ---
 
