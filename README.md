@@ -15,7 +15,7 @@ Percebemos o quanto a comunicação é fragmentada,  o responsável só descobre
 Dessa forma, resolvemos centralizar as informações acadêmicas dos alunos e criar um canal de comunicação direto entre a escola, os professores, os alunos e os responsáveis. O sistema reúne em um único lugar: notas, frequência, calendário e avisos, com uma visão diferente para cada perfil, de modo que a informação certa chegue à pessoa certa em tempo real.
 
 
-Acesse o site: 
+Acesse o site: https://saviocunha.github.io/escola360/
 
 ---
 
