@@ -16,6 +16,7 @@ Dessa forma, resolvemos centralizar as informações acadêmicas dos alunos e cr
 
 
 Acesse o site: 
+
 ---
 
 ## Características Principais
@@ -42,6 +43,7 @@ Alimentar um portal onde responsáveis e alunos acessam informações em tempo r
 
 **4. Integração com ERPs escolares:**
 Atuar como módulo de "vida acadêmica" (notas, frequências, boletins) e fonte de dados para dashboards de desempenho e evasão escolar.
+
 ---
 
 ## Visão Geral do Projeto (Backend)
