@@ -242,7 +242,7 @@ Essas decisões ajudam a tornar o sistema **mais organizado, intuitivo e eficien
 ### Design Centrado no Usuário (DCU)
 
 O DCU é uma metodologia que coloca o usuário final no centro das decisões de design, considerando suas necessidades, limitações e comportamentos reais. 
-No Escola360, esses princípios contribuíram para a redução de erros humanos, melhoria da usabilidade, redução da carga cognitiva e maior eficiência operacional com o objetivo de entregar não apenas código funcional, mas um sistema capaz de resolver problemas reais do ambiente educacional, proporcionando uma experiência digital mais eficiente e acessível. Esse entendimento guiou decisões concretas como a escolha das cores, a organização das informações mais importantes na primeira tela, a simplicidade dos ícones e a clareza das notificações. 
+No Escola360, esses princípios contribuíram para a redução de erros humanos, melhoria da usabilidade, redução da carga cognitiva e maior eficiência operacional com o objetivo de entregar não apenas código funcional, mas um sistema capaz de resolver problemas reais do ambiente educacional, proporcionando uma experiência digital mais eficiente e acessível. 
 
 ## Importância da Experiência do Usuário (UX)
 
@@ -271,12 +271,11 @@ Após a etapa de wireframe, o projeto Escola360 evoluiu para um protótipo de al
  
 A arquitetura de software pode ser compreendida como a espinha dorsal que estrutura um sistema. Ela define não apenas seus componentes, mas também as relações entre eles e os princípios que governam sua evolução. Assim como um edifício precisa de um projeto estrutural, um sistema de software necessita de um planejamento arquitetônico para garantir seu funcionamento adequado e eficiente.
  
-
 ### Por que a Arquitetura é Importante?
  
 A arquitetura permite a **modularização do sistema**, dividindo-o em partes colaborativas, o que possibilita o desenvolvimento paralelo entre equipes e reduz a sobrecarga cognitiva dos desenvolvedores. Ela também atua como um **artefato de comunicação** entre arquitetos, desenvolvedores, gerentes e clientes, alinhando expectativas e orientando decisões técnicas e de negócio.
  
-Além disso, as decisões arquiteturais determinam, ainda antes da implementação, as tecnologias que poderão ser utilizadas, como ocorrerá o fluxo de dados entre os componentes e quais trade-offs serão aceitos — como o equilíbrio entre desempenho, escalabilidade e complexidade.
+Além disso, as decisões arquiteturais determinam, ainda antes da implementação, as tecnologias que poderão ser utilizadas, como ocorrerá o fluxo de dados entre os componentes e quais trade-offs serão aceitos, como o equilíbrio entre desempenho, escalabilidade e complexidade.
  
 
 ### Influência nos Atributos de Qualidade
@@ -317,16 +316,85 @@ disciplinas, notas e frequência.
 
 - Autenticação real e controle de acesso por perfil
 - Dashboards de gestor, professor, aluno e responsável
-- Lançamento de notas e registro de frequÊncia pela interface
+- Lançamento de notas e registro de frequência pela interface
 - Boletim escolar e mural de avisos
 - Geração de relatórios
 - Integração entre a interface web e o banco de dados
  
  ---
 
- ## Interface Web Implementada
+ ## Interface Web Implementada (prints)
 
 - Landing Page 
+
+## Tecnologias Utilizadas
+
+### Frontend (entrega desta Sprint)
+
+| Tecnologia | Uso no projeto | Por que foi escolhida |
+|---|---|---|
+| **HTML5** | Estrutura das seis paginas do site | Marcação semântica (`header`, `nav`, `main`, `section`, `article`, `footer`), que melhora acessibilidade e SEO |
+| **CSS3** | Toda a estilização, em um único `style.css` | Flexbox e media queries dão conta da responsividade sem dependências externas |
+| **JavaScript** | Diretório reservado para as próximas etapas | O menu hamburguer foi resolvido apenas com CSS, então nenhum script foi necessário no MVP |
+| **Google Fonts (DM Sans)** | Tipografia da interface | Fonte sem serifa de alta legibilidade em telas pequenas, ponto critico para o acesso via celular |
+
+### Backend e dados
+
+| Tecnologia | Uso no projeto | Por que foi escolhida |
+|---|---|---|
+| **Python 3.10+** | Modelagem do domínio em POO | Sintaxe legível e suporte nativo a herança, properties e encapsulamento |
+| **PostgreSQL** | Projeto físico do banco de dados | Integridade referencial, constraints avançadas e conformidade com o padrão SQL |
+
+### Ferramentas de desenvolvimento
+
+| Ferramenta | Uso no projeto |
+|---|---|
+| **Git e GitHub** | Versionamento, hospedagem do código e colaboração entre os integrantes |
+| **GitHub Pages** | Publicação do site, permitindo validar o resultado em celulares reais |
+| **Visual Studio Code** | Editor padrão da equipe, com a extensão Live Server |
+| **Figma** | Protótipo de alta fidelidade |
+| **Canva** | Wireframe e sitemap |
+
+## Processo de Desenvolvimento
+
+### Divisão das tarefas
+
+| Integrante | Frente de trabalho |
+|---|---|
+| Francisco Savio | Home Page, arquitetura de pastas, relatórios |
+| Beatriz Benigno | Página de Funcionalidades , identidade visual, menu hambúrguer responsivo |
+| Diogo Sousa | Tela de login completa (campos, botão, "Lembrar-me", recuperação de senha) e correções de responsividade |
+| Junior Ferreira | Pagina "Sobre nós" |
+
+### Uso do GitHub e estratégia de versionamento
+
+O código ficou centralizado em um repositório único, com todo o trabalho
+integrado na branch `main`. Cada integrante trabalhava na sua frente e
+sincronizava com `git pull` antes de enviar as alterações; as divergências
+foram resolvidas por merge, sem perda de trabalho.
+
+### Dificuldades encontradas e soluções adotadas
+
+**Organização inicial dos arquivos.** Os primeiros arquivos foram criados
+soltos na raiz do repositório. Conforme o numero de paginas cresceu, ficou
+claro que a navegação não escalaria, e a equipe reorganizou tudo nos
+diretórios `css/`, `img/`, `js/` e `paginas/`, corrigindo todas as referencias.
+
+**Caminhos absolutos quebravam o site fora da raiz.** As paginas usavam
+caminhos absolutos, o que funcionava na maquina de quem escreveu mas quebrava
+imagens e estilos ao abrir o site de uma subpasta ou publica-lo no GitHub
+Pages. A solução foi converter todas as referencias para caminhos relativos.
+
+**Menu de navegação no celular.** O cabeçalho não cabia em telas pequenas e a
+equipe ainda não havia estudado JavaScript. A solução foi implementar o menu
+hamburguer apenas com CSS, usando um `checkbox` oculto controlado por um
+`label` para guardar o estado de aberto e fechado, o que manteve o site sem
+dependência de script.
+
+**Volume do CSS.** Com um único arquivo de estilos passando de 600 linhas,
+achar e alterar uma regra virou um gargalo. Foram adicionados comentários
+delimitando cada bloco e criado um glossário das propriedades usadas, que
+serviu também como material de estudo para a equipe.
 
 
 
