@@ -6,7 +6,7 @@ O Escola360 é uma aplicação de gestão escolar que modela o ecossistema de um
 
 ---
 
-## Sobre o Escola360
+## Sobre o projeto
 
 Visto que, na maior parte das escolas públicas de educação básica, principalmente no interior, o acompanhamento da vida escolar do aluno ainda depende de registros em papel e planilhas isoladas. Ademais, as notas ficam com o professor, a frequência fica na secretaria e os avisos chegam à família por bilhete no caderno. 
 
@@ -43,8 +43,6 @@ Alimentar um portal onde responsáveis e alunos acessam informações em tempo r
 **4. Integração com ERPs escolares:**
 Atuar como módulo de "vida acadêmica" (notas, frequências, boletins) e fonte de dados para dashboards de desempenho e evasão escolar.
 ---
-
-
 
 ## Visão Geral do Projeto (Backend)
 
