@@ -242,10 +242,7 @@ Essas decisões ajudam a tornar o sistema **mais organizado, intuitivo e eficien
 ### Design Centrado no Usuário (DCU)
 
 O DCU é uma metodologia que coloca o usuário final no centro das decisões de design, considerando suas necessidades, limitações e comportamentos reais. 
-No Escola360, esses princípios contribuíram para a redução de erros humanos, melhoria da usabilidade, redução da carga cognitiva e maior eficiência operacional com o objetivo de entregar não apenas código funcional, mas um sistema capaz de resolver problemas reais do ambiente educacional, proporcionando uma experiência digital mais eficiente e acessível.
-Esse entendimento guiou decisões concretas como a escolha das cores, a organização das informações mais importantes na primeira tela, a simplicidade dos ícones e a clareza das notificações. 
-O objetivo é reduzir a carga cognitiva e os erros
-humanos, tornando a tecnologia acessível justamente para quem mais precisa dela.
+No Escola360, esses princípios contribuíram para a redução de erros humanos, melhoria da usabilidade, redução da carga cognitiva e maior eficiência operacional com o objetivo de entregar não apenas código funcional, mas um sistema capaz de resolver problemas reais do ambiente educacional, proporcionando uma experiência digital mais eficiente e acessível. Esse entendimento guiou decisões concretas como a escolha das cores, a organização das informações mais importantes na primeira tela, a simplicidade dos ícones e a clareza das notificações. 
 
 ## Importância da Experiência do Usuário (UX)
 
