@@ -325,7 +325,11 @@ disciplinas, notas e frequência.
 
  ## Interface Web Implementada (prints)
 
-- Landing Page 
+- Página Inicial
+![inicial](inicial.png)
+- Login
+- Funcionalidades
+- Sobre Nós
 
 ## Tecnologias Utilizadas
 
