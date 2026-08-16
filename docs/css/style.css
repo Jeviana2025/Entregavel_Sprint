@@ -1,0 +1,31 @@
+﻿/* ==========================================================================
+   ESCOLA360 — FOLHA DE ESTILO PRINCIPAL
+   --------------------------------------------------------------------------
+   Este arquivo NÃO contém regras de estilo: ele apenas agrega os demais
+   arquivos CSS, que foram divididos por responsabilidade para facilitar a
+   manutenção. Cada página continua referenciando apenas este arquivo
+   (<link rel="stylesheet" href="css/style.css">), pois o navegador
+   processa os @import automaticamente.
+
+   Estrutura:
+     base.css       — reset global, <body>, <main>, <img>, <footer>
+     header.css     — cabeçalho, logo, área do usuário e menu hambúrguer
+     home.css       — página inicial, botão, funcionalidades e cards
+     login.css      — tela de login (campos reutilizados no Suporte)
+     pages.css      — páginas institucionais (Sobre Nós / Suporte)
+     dashboard.css  — painel do gestor (painel lateral, stats, gráfico,
+                      listas e tabela)
+     responsive.css — media queries (768px e 480px)
+
+   IMPORTANTE: a ordem dos @import define a precedência — o arquivo
+   carregado por último sobrescreve os anteriores em caso de conflito.
+   responsive.css deve permanecer no final.
+   ========================================================================== */
+
+@import "base.css";
+@import "header.css";
+@import "home.css";
+@import "login.css";
+@import "pages.css";
+@import "dashboard.css";
+@import "responsive.css";
