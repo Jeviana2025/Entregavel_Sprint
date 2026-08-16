@@ -33,6 +33,14 @@
     padding: clamp(1rem, 3vw, 2rem);
 }
 
+/* Cards da página Sobre Nós: centralizados e com largura limitada
+   (mesmo padrão da seção de funcionalidades da página inicial). */
+main .cards {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem) 2rem;
+}
+
 /* Seção da página Suporte: título centralizado e largura máxima. */
 .suporte {
     max-width: 1200px;
